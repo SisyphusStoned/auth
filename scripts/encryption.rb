@@ -9,4 +9,6 @@ puts secret
 encrypted_secret = BCrypt::Password.create(secret)
 puts encrypted_secret
 # 2. decrypt the encrypted string
+test = "Vincent"
+puts BCrypt::Password.new(encrypted_secret) == test
 # 3. check if decrypted value matches secret
